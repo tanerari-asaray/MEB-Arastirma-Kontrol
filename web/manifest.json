@@ -1,0 +1,10 @@
+{
+  "name":"MEB Araştırma Kontrol",
+  "short_name":"MEB Araştırma",
+  "start_url":"./index.html",
+  "display":"standalone",
+  "background_color":"#f4f7fb",
+  "theme_color":"#17365d",
+  "lang":"tr-TR",
+  "icons":[]
+}
