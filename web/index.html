@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17365d">
+  <link rel="manifest" href="manifest.json">
+  <title>MEB Araştırma Kontrol</title>
+  <style>
+    :root{--navy:#17365d;--blue:#245b8f;--bg:#f4f7fb;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#dbe3ec;--green:#15803d;--red:#b91c1c;--orange:#c2410c;--yellow:#a16207;--gray:#64748b}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    header{background:linear-gradient(135deg,#17365d,#245b8f);color:white;padding:18px 22px;position:sticky;top:0;z-index:5}
+    header .title{font-size:22px;font-weight:800}.sub{font-size:12px;opacity:.85;margin-top:3px}
+    nav{display:flex;gap:8px;overflow:auto;padding:10px 14px;background:white;border-bottom:1px solid var(--line);position:sticky;top:73px;z-index:4}
+    nav button{border:0;background:#eef3f8;color:#334155;padding:9px 13px;border-radius:10px;white-space:nowrap;cursor:pointer;font-weight:700}
+    nav button.active{background:var(--navy);color:white}
+    main{max-width:1200px;margin:auto;padding:18px}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:0 2px 8px rgba(15,23,42,.04)}
+    .stat{font-size:28px;font-weight:800;margin-top:5px}.muted{color:var(--muted);font-size:13px}
+    h2{margin:0 0 12px;font-size:20px} h3{margin:0 0 8px;font-size:16px}
+    label{display:block;font-size:13px;font-weight:700;margin:10px 0 5px} input,select,textarea{width:100%;padding:10px 11px;border:1px solid #cbd5e1;border-radius:9px;font:inherit;background:white}
+    textarea{min-height:90px;resize:vertical}.row{display:flex;gap:10px;flex-wrap:wrap}.row>*{flex:1;min-width:160px}
+    button.primary,button.secondary,button.danger{border:0;border-radius:9px;padding:10px 14px;font-weight:800;cursor:pointer}
+    button.primary{background:var(--navy);color:#fff}button.secondary{background:#e8eef5;color:#17365d}button.danger{background:#fee2e2;color:#991b1b}
+    .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .badge{display:inline-block;padding:5px 8px;border-radius:999px;font-size:11px;font-weight:800}
+    .GECTI{background:#dcfce7;color:var(--green)}.EKSIK{background:#fee2e2;color:var(--red)}.CELISKI{background:#ffedd5;color:var(--orange)}
+    .KONTROL{background:#fef3c7;color:var(--yellow)}.UYGULANMAZ{background:#f1f5f9;color:#475569}.MANUEL{background:#dbeafe;color:#1d4ed8}
+    .criterion{border:1px solid var(--line);border-radius:12px;padding:13px;margin-bottom:9px;background:#fff}
+    .criterion .top{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}.criterion .num{font-weight:900;color:var(--navy);min-width:30px}
+    .finding{background:#f8fafc;border-left:4px solid #94a3b8;padding:9px;margin-top:9px;font-size:13px}
+    table{width:100%;border-collapse:collapse;font-size:13px}th,td{border-bottom:1px solid var(--line);padding:9px;text-align:left;vertical-align:top}th{background:#f8fafc}
+    .drop{border:2px dashed #b8c7d9;border-radius:12px;padding:25px;text-align:center;background:#f8fbff}
+    .small{font-size:11px}.notice{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;border-radius:10px;padding:10px;font-size:13px}
+    .success{background:#f0fdf4;border:1px solid #bbf7d0;color:#166534;border-radius:10px;padding:10px;font-size:13px}
+    .hidden{display:none!important}
+    @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}
+    @media(max-width:560px){.grid{grid-template-columns:1fr}main{padding:10px}.card{padding:13px}header{padding:14px}}
+    @media print{header,nav,.no-print{display:none!important}body{background:white}.card{box-shadow:none}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="title">MEB ARAŞTIRMA KONTROL</div>
+  <div class="sub">Araştırma Uygulama İzni Ön İnceleme ve Karar Destek Sistemi · Kural Seti 2025.08</div>
+</header>
+<nav id="nav"></nav>
+<main id="app"></main>
+<script src="app.js"></script>
+</body>
+</html>
